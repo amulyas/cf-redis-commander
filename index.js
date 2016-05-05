@@ -38,13 +38,16 @@ console.log(services);
 
 var credentials = getCredentials();
 
+admin = process.env.USERNAME
+pass = process.env.PASSWORD
+
 
 var cmd = "./node_modules/.bin/redis-commander";
 cmd += " --redis-port " + credentials.port;
 cmd += " --redis-host " + credentials.host;
 cmd += " --redis-password " + credentials.password;
-cmd += " --http-auth-username " + "admin";
-cmd += " --http-auth-password " + "pass";
+cmd += " --http-auth-username " + admin;
+cmd += " --http-auth-password " + pass;
 cmd += " --port " + process.env.PORT;
 
 console.log('cmd: ' + cmd);
