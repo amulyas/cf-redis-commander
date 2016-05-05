@@ -38,8 +38,23 @@ console.log(services);
 
 var credentials = getCredentials();
 
-admin = process.env.USERNAME
-pass = process.env.PASSWORD
+if ( process.env.USERNAME)
+ {
+  admin = process.env.USERNAME
+ }
+else
+ {
+  admin = admin
+ }
+ 
+ if ( process.env.PASSWORD)
+ {
+  admin = process.env.PASSWORD
+ }
+else
+ {
+  pass = pass
+ }
 
 
 var cmd = "./node_modules/.bin/redis-commander";
