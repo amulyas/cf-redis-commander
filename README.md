@@ -29,3 +29,5 @@ cf push --no-start
 ```
 http://cf-redis-commander.cfapps.io
 ```
+
+It can read USERNAME and PASSWORD from vcap variables and use it for your authentication 
