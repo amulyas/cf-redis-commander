@@ -37,25 +37,22 @@ console.log(services);
 };
 
 var credentials = getCredentials();
-
-if ( process.env.USERNAME)
- {
-  admin = process.env.USERNAME
- }
+if ( typeof process.env.USERNAME !== 'undefined' && process.env.USERNAME )
+{
+ admin = process.env.USERNAME
+}
 else
- {
-  admin = admin
- }
- 
- if ( process.env.PASSWORD)
- {
-  admin = process.env.PASSWORD
- }
+{
+admin = admin
+}
+if ( typeof process.env.PASSWORD !== 'undefined' && process.env.PASSWORD )
+{
+ pass = process.env.PASSWORD
+}
 else
- {
-  pass = pass
- }
-
+{
+pass = pass
+}
 
 var cmd = "./node_modules/.bin/redis-commander";
 cmd += " --redis-port " + credentials.port;
