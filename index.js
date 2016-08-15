@@ -54,7 +54,7 @@ else
 pass = pass
 }
 
-var cmd = "./node_modules/.bin/redis-commander";
+var cmd = "./node_modules/.bin/redis-benchmark";
 cmd += " --redis-port " + credentials.port;
 cmd += " --redis-host " + credentials.host;
 cmd += " --redis-password " + credentials.password;
